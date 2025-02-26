@@ -33,3 +33,54 @@ This guide covers:
 **Default credentials:**
 - **Username:** `admin`
 - **Password:** `password found in plaintext above the localhost info`
+
+## 🔹 3. Setting Up SMTP for Email Sending  
+
+To send phishing emails using Gophish, you need to **configure an SMTP server**. This section will guide you through setting up an SMTP profile.  
+
+### 📌 What is SMTP?  
+SMTP (**Simple Mail Transfer Protocol**) is the protocol used for sending emails. Gophish requires an SMTP server to deliver phishing emails to targets.  
+
+### 🛠️ Steps to Configure SMTP in Gophish  
+
+1. **Open Gophish Admin Panel**  
+
+2. **Navigate to Sending Profiles**  
+   - Click on **Sending Profiles** in the left-hand menu  
+   - Click **+ New Profile**  
+
+3. **Enable Less Secure Apps (For Gmail SMTP)**  
+   - If using Gmail, **generate an App Password** [here](https://myaccount.google.com/apppasswords).  
+   - Type "Mail" and generate a 16-character password.  
+   - Use this password in the SMTP settings instead of your normal Gmail password.  
+4. **Enter SMTP Details**  
+Let's first start with a Gmail setup, later on we move onto an Outlook setup!
+### Gmail
+
+   | Field            | Value (Example for Gmail)                     | Description |
+   |-----------------|----------------------------------|-------------|
+   | **Name**        | `Gmail SMTP`                     | Any name you want |
+   | **Interface**   | `SMTP`                           | Select SMTP |
+   | **SMTP From**   | `System Notification <your-email@gmail.com>` | The sender name & email displayed to recipients |
+   | **Host**        | `smtp.gmail.com`                | SMTP server address |
+   | **Username**    | `your-email@gmail.com`          | Your full email address |
+   | **Password**    | `Your-App-Password`             | App Password generated for authentication in your Google Account Settings |
+
+5. **Save & Test Connection**  
+   - Click **Save**  
+   - Click **Send Test Email** to verify the setup to your email
+
+---
+
+### 🔎 Troubleshooting SMTP Issues  
+
+🚨 **Common Errors & Fixes:**  
+
+| Error Message | Solution |
+|--------------|----------|
+| `535 5.7.8 Username and Password not accepted` | Ensure you’re using an **App Password**, not your regular email password. Ensure you input your own email.|
+| `Max connection attempts exceeded` | Check if your SMTP server blocks connections from unknown locations. |
+| `Timeout or Connection Refused` | Verify the SMTP server address and **port (587 for TLS, 465 for SSL)**. |
+
+---
+### Outlook
