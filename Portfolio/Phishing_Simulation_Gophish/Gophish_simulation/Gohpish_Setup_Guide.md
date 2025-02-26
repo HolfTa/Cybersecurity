@@ -84,3 +84,54 @@ Let's first start with a Gmail setup, later on we move onto an Outlook setup!
 
 ---
 ### Outlook
+
+#### **1. Enable SMTP Authentication**
+Before configuring Gophish, ensure that **SMTP authentication** is enabled for your Outlook account.
+
+1. Sign in to [Microsoft 365 Admin Center](https://admin.microsoft.com/)
+2. Navigate to **Users > Active Users**
+3. Select your account, then go to **Mail > Email Apps**
+4. Ensure that **Authenticated SMTP** is **enabled**
+5. If using **Multi-Factor Authentication (MFA)**, create an **App Password** at [Microsoft Security](https://mysignins.microsoft.com/security-info)
+
+---
+
+#### **2. Enter SMTP Details**
+Use the following settings for your Outlook SMTP configuration:
+
+| Field            | Value (Example for Outlook)                  | Description |
+|-----------------|--------------------------------|-------------|
+| **Name**        | `Outlook SMTP`                 | Any name you want |
+| **Interface**   | `SMTP`                         | Select SMTP |
+| **SMTP From**   | `Your Name <your-email@outlook.com>` | The sender name & email displayed to recipients |
+| **Host**        | `smtp.office365.com`           | SMTP server address for Outlook/Office 365 |
+| **Username**    | `your-email@outlook.com`       | Your full Outlook email address |
+| **Password**    | `Your-App-Password`            | App Password (if MFA enabled) or regular password (if MFA is off) |
+| **Port**        | `587`                          | TLS port (recommended) |
+| **Use TLS**     | `Yes`                          | Ensure encryption |
+
+---
+
+#### **3. Save & Test Connection**
+- Click **Save**  
+- Click **Send Test Email** to confirm the setup is working  
+
+---
+
+### 🔎 Troubleshooting Outlook SMTP Issues
+
+🚨 **Common Errors & Fixes:**
+
+| Error Message | Solution |
+|--------------|----------|
+| `535 5.7.3 Authentication unsuccessful` | Ensure SMTP authentication is enabled in your Microsoft 365 account. |
+| `535 5.7.8 Username and Password not accepted` | Use an **App Password** if MFA is enabled. |
+| `Server timed out` | Verify that the **host and port (587 for TLS)** are correct. |
+| `Connection refused` | Some corporate networks block SMTP traffic—try using a different network or VPN. |
+
+---
+
+After configuring SMTP, you’re ready to start **sending phishing simulations** using Gophish! 🚀  
+Next, let's move on to **creating phishing templates** and running campaigns.  
+
+---
