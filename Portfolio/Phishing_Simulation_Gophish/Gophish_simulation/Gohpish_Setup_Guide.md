@@ -62,7 +62,7 @@ Let's first start with a Gmail setup, later on we move onto an Outlook setup!
    | **Name**        | `Gmail SMTP`                     | Any name you want |
    | **Interface**   | `SMTP`                           | Select SMTP |
    | **SMTP From**   | `System Notification <your-email@gmail.com>` | The sender name & email displayed to recipients |
-   | **Host**        | `smtp.gmail.com`                | SMTP server address |
+   | **Host**        | `smtp.gmail.com:587`                | SMTP server address |
    | **Username**    | `your-email@gmail.com`          | Your full email address |
    | **Password**    | `Your-App-Password`             | App Password generated for authentication in your Google Account Settings |
 
@@ -104,7 +104,7 @@ Use the following settings for your Outlook SMTP configuration:
 | **Name**        | `Outlook SMTP`                 | Any name you want |
 | **Interface**   | `SMTP`                         | Select SMTP |
 | **SMTP From**   | `Your Name <your-email@outlook.com>` | The sender name & email displayed to recipients |
-| **Host**        | `smtp.office365.com`           | SMTP server address for Outlook/Office 365 |
+| **Host**        | `smtp.office365.com:587`           | SMTP server address for Outlook/Office 365 |
 | **Username**    | `your-email@outlook.com`       | Your full Outlook email address |
 | **Password**    | `Your-App-Password`            | App Password (if MFA enabled) or regular password (if MFA is off) |
 | **Port**        | `587`                          | TLS port (recommended) |
