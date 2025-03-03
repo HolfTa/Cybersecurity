@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Gift Claim</title>
+    <style>
+        body {
+            background-color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        /* Content container that adjusts to viewport, modern look */
+        .container {
+            background-color: #f8f8f8;
+            width: 80%;
+            height: 80%;
+            border-radius: 20px;
+            border: 5px solid black;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            color: black;
+            font-size: 2vw;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+            padding: 20px;
+        }
+        /* Page background with falling confetti*/
+        .confetti {
+            position: absolute;
+            width: 5px;
+            height: 5px;
+            background-color: red;
+            opacity: 0.7;
+            border-radius: 50%;
+            animation: fall linear infinite;
+        }
+        @keyframes fall {
+            0% { transform: translateY(-100vh) translateX(0); }
+            100% { transform: translateY(100vh) translateX(20px); }
+        }
+        @media (max-width: 768px) {
+            .container {
+                font-size: 4vw;
+            }
+        }
+        @media (max-width: 480px) {
+            .container {
+                font-size: 6vw;
+            }
+        }
+        /* Input containers to gather employee ID and Password */
+        .input-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 20px;
+        }
+        .input-container input {
+            margin: 10px;
+            padding: 10px;
+            font-size: 1.2vw;
+            border: 2px solid black;
+            border-radius: 5px;
+            width: 80%;
+            max-width: 300px;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        /* Confetti generation */
+        function createConfetti() {
+            for (let i = 0; i < 100; i++) {
+                let confetti = document.createElement("div");
+                confetti.classList.add("confetti");
+                confetti.style.left = Math.random() * window.innerWidth + "px";
+                /* Change value to slow or speed up */
+                confetti.style.animationDuration = (Math.random() * 6 + 4) + "s";
+                confetti.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 50%)`;
+                document.body.appendChild(confetti);
+                /* If changed value, adjust lifetime */
+                setTimeout(() => confetti.remove(), 10000);
+            }
+        }
+        createConfetti();
+        /* If changed value, adjust creation time */
+        setInterval(createConfetti, 5000);
+    </script>
+    <div class="container">
+        <h1>Employee Identity Confirmation</h1>
+        <p>Please enter your Employee ID and Password to claim your gift.</p>
+        <div class="input-container">
+            <input type="text" placeholder="Employee ID">
+            <input type="password" placeholder="Password">
+        </div>
+    </div>
+</body>
+</html>
