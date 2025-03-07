@@ -231,7 +231,7 @@ Paste your **HTML content** into the provided editor. Below is an example of a w
         <tr>
             <td align="center">
 
-                <!-- Claim Button -->
+                <!-- Claim Button, don't forget to edit the link to YOUR link -->
                 <a href="https://phishing-website.com" style="display: inline-block; background-color: #007bff; color: white; padding: 15px 30px; font-size: 18px; font-weight: bold; text-decoration: none; border-radius: 5px;">
                     Claim Here
                 </a>
