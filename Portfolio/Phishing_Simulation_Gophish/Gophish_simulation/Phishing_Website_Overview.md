@@ -2,7 +2,7 @@
 
 ## Introduction
 
-Welcome to the website overview. This project aims to simulate a variety of modern phishing attacks in order to assess human error vulnerabilities within organizations. The simulations will range from basic phishing attempts to more advanced, targeted attacks, helping employees identify and avoid potential threats.
+Welcome to the website overview. This document aims to simulate a variety of modern phishing attacks in order to assess human error vulnerabilities within organizations. The simulations will range from basic phishing attempts to more advanced, targeted attacks, helping employees identify and avoid potential threats.
 
 All documentation, files, and materials related to the websites will be in this document, please refer to this document in case of need.
 
@@ -16,11 +16,11 @@ Modern phishing attacks have become increasingly sophisticated, evolving beyond 
 - **Business Email Compromise (BEC)**: Targeting organizations to deceive employees into redirecting payments or sending sensitive information to the attacker by impersonating trusted figures.
 - **Malware delivery**: Phishing emails used to deliver malicious software, such as ransomware or trojans, often to compromise systems and steal data.
 
-The goal of this project is to simulate these modern phishing threats at varying levels of complexity. This will allow employees to learn how to identify and avoid these attacks, whether they are basic scams or highly targeted, advanced phishing attempts.
+The goal of the project is to simulate these modern phishing threats at varying levels of complexity. This will allow employees to learn how to identify and avoid these attacks, whether they are basic scams or highly targeted, advanced phishing attempts.
 
 # Step 2: Overview of the Three Phishing Simulation Setups  
 
-This project includes three different phishing simulation setups, each increasing in sophistication. These setups are designed to help organizations test employee awareness and response to phishing attacks at different levels of complexity.  
+The project includes three different phishing simulation setups, each increasing in sophistication. These setups are designed to help organizations test employee awareness and response to phishing attacks at different levels of complexity.  
 
 ---
 
