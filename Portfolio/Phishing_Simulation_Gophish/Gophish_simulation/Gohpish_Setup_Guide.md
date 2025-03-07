@@ -1,5 +1,31 @@
 # Gophish Setup Guide
 
+# Table of Contents
+
+1. [Introduction](#1-introduction)
+   - Why Windows?
+2. [Installing Gophish on Windows](#2-installing-gophish-on-windows)
+   - Download and Extract Gophish
+   - Running Gophish
+3. [Setting Up SMTP for Email Sending](#3-setting-up-smtp-for-email-sending)
+   - What is SMTP?
+   - Steps to Configure SMTP in Gophish
+     - Gmail Setup
+     - Outlook Setup
+   - Troubleshooting SMTP Issues
+4. [Creating Phishing Email Templates](#4-creating-phishing-email-templates)
+   - Email Templates in Gophish
+   - Steps to Create a Phishing Email Template in Gophish
+   - Recommendations for a More Convincing Email Template
+     - Customize with Company Branding
+     - Subject Line
+     - Professional Language
+     - Personalization
+     - Minimalistic Design
+     - Spelling and Grammar
+
+---
+
 ## 🔹 1. Introduction
 Gophish is an open-source phishing framework designed for **security awareness training** and penetration testing. It allows organizations to simulate phishing attacks to educate employees about social engineering threats.
 
@@ -135,3 +161,89 @@ After configuring SMTP, you’re ready to start **sending phishing simulations**
 Next, let's move on to **creating phishing templates** and running campaigns.  
 
 ---
+
+## 🔹 4. Creating Phishing Email Templates
+
+### **📝 Email Templates in Gophish**
+
+Phishing email templates are a crucial part of any phishing simulation campaign. They simulate real-world phishing emails and are designed to trick the target into clicking on a malicious link or attachment. Gophish allows you to create and manage your own email templates to fit your phishing campaign.
+
+### **🛠️ Steps to Create a Phishing Email Template in Gophish**
+
+1. **Navigate to Email Templates**  
+   - Click on **Email Templates** in the left-hand menu.
+   - Click **+ New Template**.
+
+2. **Enter Template Details**  
+   - **Name**: Choose a name for your template (e.g., "Password Reset", "Account Verification").
+   - **Subject**: Enter a subject that grabs attention (e.g., "Immediate Action Required: Your Account has been Compromised").
+
+3. **Enter HTML Email Content**  
+Paste your **HTML content** into the provided editor. Below is an example of a working and good-looking HTML email template for a phishing simulation:
+
+3. **Enter HTML Email Content**  
+
+### 💡 Recommendations for a More Convincing Email Template
+
+To improve the credibility of your phishing email, consider the following recommendations:
+
+#### Customize with Company Branding:
+- **Logo**: Always include the company’s official logo at the top of the email to make it appear legitimate.
+- **Colors**: Match the company’s brand colors for buttons, links, and headings to make the email blend in with the company’s actual email designs.
+- **Fonts**: Use the same fonts and typography used in the company’s official communications (e.g., Arial, Helvetica, or any other fonts the company uses).
+
+#### Subject Line:
+- Create a subject line that mimics urgent or important communications from the company. Common tactics include "Action Required", "Account Security Alert", or "Immediate Action Needed". Make the subject line time-sensitive to increase urgency.
+
+#### Professional Language:
+- Use formal language that matches the tone of emails the company typically sends. Avoid using slang or casual phrases.
+
+#### Personalization:
+- If possible, personalize the email with the target’s name or their job title. Many organizations use personalized greetings, such as “Dear [First Name]” or “Dear [Job Title]”. This can make the email appear more genuine.
+
+#### Minimalistic Design:
+- Avoid cluttered designs with excessive text or images. A clean and minimal layout is often used in legitimate business emails. The focus should be on the call-to-action.
+
+#### Spelling and Grammar:
+- Ensure the email is free from spelling or grammatical errors. Poorly written emails are a big red flag that can alert the target that something is off.
+
+---
+
+Paste your **HTML content** into the provided editor. Below is an example of a working and good-looking HTML email template for a phishing simulation:
+
+```html
+
+<!DOCTYPE html>
+<html>
+<body style="background-color: white; text-align: center; font-family: Arial, sans-serif; margin: 0; padding: 0;">
+
+    <!-- Gift Card Image -->
+    <table align="center" width="100%" cellspacing="0" cellpadding="0" border="0">
+        <tr>
+            <td align="center">
+                <img src="https://i.imgur.com/PgVrSxe.png" alt="Gift Card" width="500" style="display: block; margin: auto;">
+            </td>
+        </tr>
+    </table>
+
+    <!-- White Background Section -->
+    <table align="center" width="500" cellspacing="0" cellpadding="20" border="0" style="background-color: white; border-radius: 10px; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); margin-top: 10px;">
+        <tr>
+            <td align="center">
+
+                <!-- Claim Button -->
+                <a href="https://phishing-website.com" style="display: inline-block; background-color: #007bff; color: white; padding: 15px 30px; font-size: 18px; font-weight: bold; text-decoration: none; border-radius: 5px;">
+                    Claim Here
+                </a>
+
+                <!-- Offer Validity Text -->
+                <p style="margin-top: 15px; font-size: 14px; color: #555;">
+                    Offer valid for 24 hours. Click the button and follow the instructions on the screen.
+                </p>
+
+            </td>
+        </tr>
+    </table>
+
+{{.Tracker}}</body>
+</html>
