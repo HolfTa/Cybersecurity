@@ -26,7 +26,7 @@
 
 ---
 
-## 🔹 1. Introduction
+## 1. Introduction
 Gophish is an open-source phishing framework designed for **security awareness training** and penetration testing. It allows organizations to simulate phishing attacks to educate employees about social engineering threats.
 
 ### Why Windows?
@@ -39,7 +39,7 @@ This guide covers:
 
 ---
 
-## 🔹 2. Installing Gophish on Windows
+## 2. Installing Gophish on Windows
 
 ### **🖥️ Download and Extract Gophish**
 1. Download the latest Windows release from [Gophish's official site](https://github.com/gophish/gophish/releases).
@@ -60,7 +60,7 @@ This guide covers:
 - **Username:** `admin`
 - **Password:** `password found in plaintext above the localhost info`
 
-## 🔹 3. Setting Up SMTP for Email Sending  
+## 3. Setting Up SMTP for Email Sending  
 
 To send phishing emails using Gophish, you need to **configure an SMTP server**. This section will guide you through setting up an SMTP profile.  
 
@@ -162,7 +162,7 @@ Next, let's move on to **creating phishing templates** and running campaigns.
 
 ---
 
-## 🔹 4. Creating Phishing Email Templates
+## 4. Creating Phishing Email Templates
 
 ### **📝 Email Templates in Gophish**
 
