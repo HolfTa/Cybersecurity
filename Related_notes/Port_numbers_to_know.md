@@ -10,7 +10,7 @@ Each port is identified by a number ranging from **0 to 65535**, divided into th
 - **Registered ports (1024–49151):** Used by software vendors for specific applications.
 - **Dynamic/private ports (49152–65535):** Used for temporary or private connections, often dynamically assigned.
 
-When a client wants to connect to a server, it specifies both the **IP address** and the **port number**. For example:
+When a client wants to connect to a server, it specifies both the **IP address** and the **port number**.
 
 ---
 
